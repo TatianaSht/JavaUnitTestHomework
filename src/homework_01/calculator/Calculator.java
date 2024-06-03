@@ -10,11 +10,9 @@ public class Calculator {
 
         if (purchaseAmount <= 0){
             throw new ArithmeticException("The purchase amount cannot be less than or equal to zero");
-        }
-        if (discountAmount < 0){
+        } else if (discountAmount < 0){
             throw new ArithmeticException("The discount amount cannot be less than zero");
-        }
-        if (discountAmount > 100){
+        } else if (discountAmount > 100){
             throw new ArithmeticException("The discount amount cannot be higher than to 100");
         }
         amountTemp = purchaseAmount - ((purchaseAmount / 100) * discountAmount);
